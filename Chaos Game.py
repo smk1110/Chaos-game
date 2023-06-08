@@ -28,7 +28,7 @@ def get_middle_point(pos1, pos2):
     y = (pos1[1] + pos2[1]) / 2
     return x,y
 
-Shape = input("Do you want to use a shape saved in 'Shape log.txt'? \n Type the name of the shape that you want to use.\n If you don't want to, type 'skip'.")
+
 
 def get_coordinates():
     coordinates = []
@@ -37,7 +37,6 @@ def get_coordinates():
         y = float(input(f"Enter the y-coordinate for point {i+1}: "))
         coordinates.append((x, y))
     return coordinates
-
 points = get_coordinates()
 p1 = points[0]
 p2 = points[1]
@@ -45,16 +44,10 @@ p3 = points[2]
 put_a_dot(p1)
 put_a_dot(p2)
 put_a_dot(p3)
-
 max_x = max(p1[0],p2[0],p3[0])
 min_x = min(p1[0],p2[0],p3[0])
 max_y = max(p1[1],p2[1],p3[1])
 min_y = min(p1[1],p2[1],p3[1])
-
-Save = input("Do you want to save this position data? (Y/N) ")
-if Save == 'Y':
-    Name = input("What is the name? ")
-
 # 판별할 점의 좌표를 입력받습니다.
 
 while True:
